@@ -237,6 +237,10 @@ const buildWhereClause = ({ qb, field, operator, value }) => {
       return qb.where(field, 'like', `%${value}%`);
     case 'ncontainss':
       return qb.whereNot(field, 'like', `%${value}%`);
+    case 'null':
+      return qb.whereNull(field);
+    case 'notnull':
+      return qb.whereNotNull(field);
 
     default:
       throw new Error(`Unhandled whereClause : ${field} ${operator} ${value}`);

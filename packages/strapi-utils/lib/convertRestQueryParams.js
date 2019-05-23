@@ -132,6 +132,8 @@ const VALID_OPERATORS = [
   'lte',
   'gt',
   'gte',
+  'null',
+  'notnull'
 ];
 
 /**
